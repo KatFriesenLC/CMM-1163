@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flexbox</title>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Akronim&family=Roboto:ital,wght@0,100;0,400;1,700&display=swap" rel="stylesheet">
+
+	<!---------tag to check the device size, needed for media queries----------->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	<style>
+				
+		body{
+			font-family: 'Roboto', sans-serif;
+			margin:0;
+		}
+		header{
+			background-color: #202020;
+			
+		/*add a bg image*/
+			background-image: url("images/moon.jpg");
+			/*sets bg img to fill available space*/
+			background-size: cover;
+			/*keeps it in place*/
+			background-attachment: fixed;
+			/*positions img in the div*/
+			Background-position: center;
+			
+			color: orange;
+			height:50vh;
+			/*this is a flexbox element*/
+			display: flex;
+			/*put this in the center of the container*/
+			align-items: center; /*vertical center*/
+			padding: 20px;
+/*			justify-content: center;*/
+		}
+		header h1{
+			font-size: 50px;
+			font-family: 'Akronim', cursive;
+		}
+	
+		.flex-container{
+			display: flex;
+			align-items: stretch;			
+		}
+		
+		.flex-container div{
+			background-color:#E8BC6A;
+			margin:5px;
+			padding:20px;
+		}
+		/*set the widths of the divs*/
+		
+		#item1{
+			flex:25%;
+		}	
+		
+		#item1 img{
+			width:100%;
+		}
+		
+		#item2{
+			flex:50%;			
+		}	
+		
+		#item3{
+			flex:25%;			
+		}	
+		
+		/** CSS for buttons **/
+		.btn{
+			background-color:#DB7027;
+			border:none;
+			padding:15px 32px;
+			font-size: 16px;
+			width:100%;
+		}
+		/*hover state*/
+		.btn:hover{
+			background-color:#A84D0F;
+			color: white;
+		}
+		
+		
+		#item4{
+			flex:25%;			
+		}	
+		#item5{
+			flex:25%;			
+		}	
+		
+		
+		/***************last row******************/
+		
+		#itemA{
+			flex:10%;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#itemB{
+			flex:35%;
+			padding: 200px 20px;
+			font-size: 20px;
+		}
+		#itemC{
+			flex:20%;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#itemC img{
+			width:100%;
+			
+		}
+		#itemD{
+			flex:40%;
+		}
+		
+		
+		
+		/************************************footer********************/
+		
+		#item6{
+			flex:25%;
+			/*over write the inherited style*/
+			background-color:transparent;
+		}
+		
+		#item7{
+			flex:50%;
+			background-color:transparent;
+		}
+		
+		#item8{
+			flex:25%;
+			background-color: transparent;
+		}
+		
+		footer{
+			background-color:#330608;
+			padding:50px 0px;
+			color:antiquewhite;
+			text-align:center;
+			font-weight:bold;
+		}
+		
+		/*********Responsive layout - makes a one column layout instead of a two column layout***********/
+		@media (max-width:800px) {
+			.flex-container {
+				flex-direction: column;
+			}
+			
+		}
+		
+	</style>
+</head>
+
+<body>
+	
+	<header>
+		
+		<h1>The Page Heading</h1>
+	</header>
+	<!----------------------------row 1 ----------->
+	
+	<div class="flex-container">
+		<div id="item1">
+			<img src="images/person.jpg" alt="hooded person">
+			
+		</div>
+		<div id="item2">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt numquam earum enim blanditiis ea optio ex, vel nemo odio reiciendis necessitatibus adipisci vero officiis ipsa saepe. Perferendis, vero! Velit voluptate tempore labore explicabo adipisci cupiditate! Itaque officia recusandae consequuntur repellendus ad aut id qui obcaecati quisquam quaerat quod atque, quas doloribus, laboriosam quia voluptatem a eos aperiam, debitis labore incidunt. Minima sit sed repellendus beatae nam rem debitis incidunt dolor explicabo quas dolore nihil veniam corporis mollitia itaque quisquam molestiae maiores, nostrum quo veritatis culpa ex distinctio nisi. Ut accusantium non, quos obcaecati incidunt voluptates. Ut quae vitae, laborum quas.</p>
+		</div>
+		<div id="item3">
+	<!--------add some buttons------------------->
+		<p><button class="btn">Click Me!</button></p>
+		<p><button class="btn">Click Me! 2</button></p>
+			
+		</div>
+	</div> 
+	
+	
+	
+	<div class="flex-container">
+		<div id="item4">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus quidem, molestias, repudiandae expedita obcaecati necessitatibus possimus magnam at pariatur quis iste veniam in sint velit, animi id omnis quae, assumenda!</p>
+		</div>
+		<div id="item5">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem officiis temporibus distinctio ratione a est explicabo, ut, accusantium facilis reiciendis molestias ipsum in, culpa nemo.</p>
+		</div>
+	</div>
+	
+	<div class="flex-container">
+		<div id="itemA">
+		<p>
+			<ul>
+			<li>Sugar</li>
+			<li>Milk</li>
+			<li>Dried Elderflower</li>
+			<li>Boiling Water</li>
+			<li>Your least favourite tea cup</li>
+			</ul>
+			</p></div>
+	
+		<div id="itemB">
+	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eum, repudiandae. Tenetur doloremque, dolores animi, architecto at id. Excepturi eum quia totam repellendus, doloribus fugiat. Officia sed minus, labore quo. Quae, vel cupiditate molestias, fugit earum aliquam, mollitia error dolorum placeat, neque officiis! Ad id quia hic vel ea reprehenderit cum eius in commodi illum, beatae necessitatibus natus eveniet culpa. Reiciendis iste, ut excepturi optio placeat eaque tempore rem dolore enim sunt mollitia ipsa fugit voluptatum, aperiam officia labore molestiae dolorum atque laudantium illum inventore quam in. Nihil aliquid quae, deserunt, sed minima, culpa quia esse fuga est similique itaque nesciunt laboriosam explicabo, accusantium! Mollitia deleniti, labore, dolore id eaque quidem ducimus debitis minus aliquam dolorem aspernatur nobis doloribus repudiandae ullam laboriosam eum enim impedit autem. Similique impedit magni quod optio, possimus consequatur et placeat error exercitationem, culpa iure, qui alias nemo dolorum veritatis reprehenderit beatae omnis. Impedit, placeat praesentium.</p></div>
+		<div id="itemC">
+			<p><button class="btn">Click Me!</button></p><br>
+			<p><button class="btn">Click Me! 2</button></p>
+	</div>
+		<div id="itemD">
+		<img src="images/skellyChair.jpg" alt="skeleton in a chair"></div>
+
+	</div>
+	
+	<footer>
+		<div class="flex-container">
+		<div id="item6"></div>
+		<div id="item7">
+			<p>Created by Kat Friesen</p>
+			<p>&copy; 2021</p>
+			
+		</div>
+		<div id="item8"></div>
+	</div> 
+	
+	
+	</footer>
+	
+</body>
+</html>

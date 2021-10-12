@@ -13,6 +13,7 @@
 				
 		body{
 			font-family: 'Roboto', sans-serif;
+			margin:0;
 		}
 		header{
 			background-color: #202020;
@@ -37,6 +38,7 @@
 		.flex-container div{
 			background-color:#DB7902;
 			margin:5px;
+			padding:20px;
 		}
 		/*set the widths of the divs*/
 		
@@ -49,6 +51,9 @@
 		#item3{
 			flex:25%;			
 		}	
+		
+		/*****************************************************second row**********/
+		
 		#item4{
 			flex:25%;			
 		}	
@@ -56,6 +61,28 @@
 			flex:25%;			
 		}	
 		
+		/************************************footer********************/
+		
+		#item6{
+			flex:25%;
+			/*over write the inherited style*/
+			
+		}
+		
+		#item7{
+			flex:50%;
+		}
+		
+		#item8{
+			flex:25%;
+			background-color: transparent;
+		}
+		
+		footer{
+			background-color:#330608;
+			padding:50px 0px;
+			
+		}
 	</style>
 </head>
 
@@ -79,6 +106,16 @@
 		<div id="item4">4</div>
 		<div id="item5">5</div>
 	</div>
+	
+	<footer>
+		<div class="flex-container">
+		<div id="item6">6</div>
+		<div id="item7">7</div>
+		<div id="item8">8</div>
+	</div> 
+	
+	
+	</footer>
 	
 </body>
 </html>
