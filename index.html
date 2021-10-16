@@ -34,7 +34,7 @@
 			display: flex;
 		}		
 		
-			h2{
+			h1, h2, h3{
 			font-family: 'Libre Baskerville' , serif;
 		}
 		
@@ -45,13 +45,13 @@
 		
 		.flex-container{
 			display:flex;
-			align-items: stretch;
+			align-items: stretch;		
 			flex-direction: row;
-			justify-content:center;
 		}
 		
 		.flex-container div{
 			display: flex;
+			flex-direction: column;
 			background-color:#FF99B1;
 			margin:0px;
 			padding:20px;
@@ -60,19 +60,22 @@
 		/*************************First Row***/
 		
 		
-		#item1{
-			flex: 30%;
+		#item1 h1{
+			flex: 50%;
 			display:flex;
-			align-items: center;
+			
 			justify-content: center;
 			padding: 10px;
 		}
 		
+		#item p {
+			align-items: below;
+		}
 		
 
 		#item2{
 			display:flex;
-			flex: 70;
+			flex: 50;
 			align-items: center;
 			justify-content: center;
 		}
@@ -173,4 +176,4 @@
 	
 </body>
 </html>
->>>>>>
+>>>>>>>>>
