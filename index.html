@@ -53,8 +53,11 @@
 		
 		.curved-head{
 			background: #fff;
-			display: block;
+			display: stretch;
+			
 		}
+		
+		
 		
 		.flex-container{
 			display:flex;
@@ -75,8 +78,12 @@
 		
 		/*************************First Row***/
 		
-		#logo {
-			
+		/**#logo {
+			z-index:2;
+		} **/
+		
+		#wave{
+			z-index:-1;
 		}
 		
 		#item1 {
@@ -146,10 +153,13 @@
 	<header>
 		
 		<div class="curved-head">
-                  <img class="logo" src="images/katLOGO.png" alt="FoxBox logo">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                 
+			
+			<svg id="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 				<path fill="#CC94F7" fill-opacity="1" d="M0,0L48,48C96,96,192,192,288,218.7C384,245,480,203,576,202.7C672,203,768,245,864,229.3C960,213,1056,139,1152,133.3C1248,128,1344,192,1392,224L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
 			</svg>
+			
+			 <img id="logo" src="images/katLOGO.png" alt="FoxBox logo">
 		</div>
 		
 	</header>
@@ -159,8 +169,9 @@
 	<section>
 		
 	<div class="flex-container">
-		<div id="item1">
-			
+		
+		
+		<div id="item1">	
 		<h1>WHO ARE THEY?</h1>
 		
 			<p>Kat is a first-year multimedia production student at the Lethbridge College. They have worked on marketing projects for local organizations and are currently involved in the operations of a local pet store while in school. They found their passion for the world of design after helping small businesses with their online presence and showing them the valuable results that can come with social media marketing. During their time at the college they have already gained enough skills to know the world of design is the place they want to stay.</p>
@@ -225,4 +236,4 @@
 	</footer>
 	
 </body>
-</html>>
+</html>>>>>>
