@@ -26,27 +26,23 @@
 	<style>
 	
 	/***********CSS goes here***************/
-		* {
-			
-		}
 		
+		
+
 		header{
 			font-family: 'Cinzel Decorative' , cursive;
-			background: url('/images/header.wave-01.svg') ;
-
-			/****
+			font-size: 100px;
+			font-size-adjust: auto;
+			text-align: center;
+			/*setting the background image to the SVG*/
+			background-image: url("image/header.wave-01.svg");
+			/*this ensures the header always is covered with the svg at whatever device size*/
 			background-size:cover;
+			/*makes sure the svg doesn't tile - tiling is the default*/
 			background-repeat: no-repeat;
+			/*position the svg so that the bottom of the image is at the bottom of the div - vertical positioning, then also center it horizontally*/
 			background-position: bottom center;
-			height: 25vh;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			position: fixed;
-			top:0;
-			width:100vw; **/
-		}  
-		
+		}
 		
 			h1, h2, h3{
 			font-family: 'Libre Baskerville' , serif;
@@ -70,47 +66,40 @@
 		.flex-container div{
 			display: flex;
 			flex-direction: column;
+/*
 			background-color: #E95083;
 			margin:0px;
 			padding:20px;
 			border-bottom: 1px solid black;
 			border-top: 1px solid black;
+*/
 		}
 		
 		/*************************First Row***/
 		
 		
 		#item1 {
-			flex: 60%;
-			display: flex;		
+			flex: 30%;
+			display: flex;	
+			margin: 30px 60px;
 			justify-content: center;
-			padding: 50px;
-			align-items: center;					
+			padding: 10px;
+			align-items: center;
+			
 		}
 
 
 		#item2{
 			display:flex;
-			flex: 40%;
+			flex: 70%;
 			align-items: center;
 			justify-content: center;
 			max-width: 30%;
-			padding: 50px;
+			padding: 10px;
+			
 		}
 		
-		 footer {
-			justify-content: center;
-            top: 50%;
-            left: 50%;
-           /* transform: translate(-50%, -50%); */
-            height: 300px;
-            width: flex;
-			margin-bottom: 0px;
-            border-radius: 550px 550px 0 0;
-            background-color: #FF3E62;	
-			bottom: 0px;
-        }
-	
+		
 		
 		/***************************************Second Row****************/
 		
@@ -121,33 +110,81 @@
 		}
 		
 		#item3{
+			flex: 40%;
 			justify-content:center;
 			padding:40px;
+			margin-right:40px;
 		}
 		
 		#item4{
+			flex: 60%;
 			justify-content:center;
 			padding:40px;
 		}
 		
-		#item6{
-			align-items: right;
+		
+		/*******************************************Third Row****************/
+		
+		.flex-container3{
+			display:flex;
+			flex-direction: row;
+			align-items: center;
 		}
-		/*****************buttons********
+		
+		#item5{
+			padding: 60px 60px;
+			flex: 70%;
+		}
+		
+		#item6{
+			padding: 60px 60px;
+			flex: 30%;
+		}
+		
+		/******************************************Final Row*********************/
+		
+		.item7{
+			text-align: center;
+			align-items: center;
+			justify-content: center;		
+		}
+		
+		
+		/****************buttons********/
+		
 		.btn{
-			background-color:#C93FE8;
-			border:none;
+			background-color:#A967DC;
+			border:10px black;
 			padding:15px 32px;
-			font-size: 16px;
-			width:100%;
+			font-size: 20px;
+			width:30%;
 			box-shadow: 5px 8px;
 			border-radius: 12px;
+			margin: 20px;
+			
 		}
-		.btn.hover {
-			background-color:#860AA2;
+		
+		.btn:hover {
+			background-color:#630F76;
 			color: white;
 		}   
-		**/
+		
+		
+		 footer {
+			background-color: #FF3E62;
+			border-top-left-radius: 25vh;  
+			border-top-right-radius: 25vh; 
+			border-top: 0;
+			height: 25vh;
+			width: 100vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+/*			position: fixed;*/
+			margin-bottom: 0;
+        }
+	
+		
 	
 	
 	</style>
@@ -161,8 +198,8 @@
 	<header>
 		
 		<div>
-			
-			 <img id="logo" src="images/katLOGO.png" alt="FoxBox logo">
+			<p>Kat Friesen</p>
+<!--			 <img id="logo" src="images/katLOGO.png" alt="FoxBox logo">-->
 		</div>
 		
 	</header>
@@ -177,11 +214,11 @@
 		<div id="item1">	
 		<h1>WHO ARE THEY?</h1>
 		
-			<p>Kat is a first-year multimedia production student at the Lethbridge College. They have worked on marketing projects for local organizations and are currently involved in the operations of a local pet store while in school. They found their passion for the world of design after helping small businesses with their online presence and showing them the valuable results that can come with social media marketing. During their time at the college they have already gained enough skills to know the world of design is the place they want to stay.</p>
+			<p>Kat is a first-year multimedia production student at the <a href="https://youtu.be/D3Fxmaiip1Y" target="_blank">Lethbridge College</a>. They have worked on marketing projects for local organizations and are currently involved in the operations of a local pet store while in school. They found their passion for the world of design after helping small businesses with their online presence and showing them the valuable results that can come with social media marketing. During their time at the college they have already gained enough skills to know the world of design is the place they want to stay.</p>
 		</div>
 		
 		<div id="item2">
-		<img src="images/katSky.png" alt="Kat's face" width="800">
+		<img src="images/katSky.png" alt="Kat's face">
 		</div>
 	</div>
 		
@@ -199,7 +236,7 @@
 		</div>
 		
 		<div id="item4">
-	<h2>THIS IS ROW 2</h2>
+	<h2>HOW DID THEY GET HERE?</h2>
 		<p>	Growing up in rural Alberta, Kat spent more of their time with animals than with people. They had the privilege of raising rabbits, goats, cows, horses, dogs, cats, and whatever neglected animal their mother found at the auction. Spending hours brushing, training, feeding and rehabilitating so many critters planted a deep passion for the well-being of all living beings. One day, they hope to get involved with organizations for wildlife education and rehabilitation to contribute to the conservation of local ecosystems.<br>
 				A combination of international travel, language learning, and pleasure reading are the essential tools in Kat’s marketable communication kit. They grew up in a bilingual family, temporarily moved to El Salvador as soon as they turned 18 and spent a few years studying English at The King’s University. Learning more about the ways different people choose to communicate verbally and visually along the way. Free writing, storytelling and poetry are a regular practice that continues to build their ability to write interesting and effective material.
 			<br> 	Their favourite way to refresh their mind is exploring the outdoors with their dog, Rosa. Everything from mountain tops to aisles of a hardware store has the potential to inspire. The crunch of autumn leaves, the sight of an overcast city, and the sound of squealing tires are some of their favourite sounds. Capturing the dynamics of life with images, video, and poetry are a few of their favourite things.</p>
@@ -215,11 +252,11 @@
 	
 	<div class="flex-container3">
 		<div id="item5">
-	<h2>THIS IS ROW 3</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis pariatur, numquam. Porro aspernatur, quasi architecto amet delectus inventore atque numquam quibusdam rem eaque quidem sed eos nostrum, nam perferendis quae ab vitae alias sint. Quam, obcaecati, reiciendis. Recusandae iure pariatur, doloribus, dolorum vitae, consequuntur impedit, eligendi omnis obcaecati tempore deserunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, sed? Mollitia voluptates officiis qui tenetur, dolorem. Laborum commodi architecto laudantium nisi distinctio accusamus esse labore deleniti veniam numquam reprehenderit et mollitia nam, perferendis ab assumenda! Minima, ipsa, quo. Explicabo facilis fugiat ipsam nobis quia ut corrupti sunt quam harum quas quasi, maxime, vero unde labore repellat sit fuga cumque deleniti? Sint inventore at, vel! Iure, dolor, minima quos quae omnis officiis accusamus voluptate qui dignissimos aliquam soluta ipsum hic dicta.</p>
+	<h2>WHERE ARE THEY GOING?</h2>
+		<p>Kat has spent years admiring <a href="https://www.youtube.com/c/PeterMcKinnon" target="_blank">media artists</a>, photographers like<a href="https://www.michaelflugstad.com/" target="_blank"> Michael Flugstad</a> and studios like <a href="https://www.vsauce.com/#/" target="_blank">VSauce</a> were some of the first spaces to show them how powerful the imaginative mind can be. After a few years of travelling and exploring different forms of academic study, they found themselves in the freedoms - and pressures - of professional design. They work hard everyday to continue building their skills in bringing ideas to life in a functional and efficient way.  </p>
 		</div>	
 		<div id="item6">
-		<img src="images/pinkWhiteClouds800.png" alt="pink background with cotton candy clouds">
+		<img src="images/pinkWhiteClouds400.png" alt="pink background with cotton candy clouds">
 		</div>
 	</div>
 	</section>
@@ -228,9 +265,19 @@
 	
 	<section>
 	
-	<div id="item6">
-	<h2>THIS IS ROW 4</h2>
-		<p>PROJECTS AND BUTTONS WILL GO HERE Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt accusantium, eos veritatis ullam, totam maxime voluptatibus sequi magni laborum, saepe quaerat libero. Ad voluptas obcaecati, quam incidunt dignissimos magni. Laboriosam repellat laborum eos sapiente soluta, non quasi. Repellat magnam quam blanditiis tempora, officiis suscipit! Modi nostrum perspiciatis esse obcaecati sed eos vel eius sapiente quis quam repellat vitae omnis, sint inventore delectus debitis, cupiditate aperiam quia quidem labore doloribus ea consequatur velit. Nulla commodi officiis dolor a, impedit, quibusdam sint! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus at deleniti, odio esse voluptates illum reprehenderit eum ex aut sapiente ipsum explicabo voluptatibus molestiae, nam alias nulla aliquid. Soluta quas voluptas animi quis rem temporibus, similique eos necessitatibus possimus illo. Dolores corporis harum autem reprehenderit architecto, enim iusto praesentium omnis modi incidunt reiciendis expedita, voluptas! Excepturi enim esse error. Debitis.</p>
+	<div class="item7">
+	<h2>WHAT CAN YOU SEE?</h2>
+	
+		
+		<div id="button1">
+		<button class="btn" onclick="#">Site Construction</button>
+		</div>
+		<div id="button2">
+		<button class="btn" onclick="#">Basic Interaction</button>
+		</div>
+		<div id="button3">
+		<button class="btn" onclick="#">Object Properties</button>
+		</div>
 	</div>
 		
 	</section>
@@ -239,9 +286,9 @@
 	
 	<footer>
 	
-		<p>Made by Kat Friesen</p>
+		<p>made with love,<br> by Kat Friesen</p>
 	
 	</footer>
 	
 </body>
-</html>>>>>>>>>
+</html>
