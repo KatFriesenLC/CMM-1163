@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+
+/**Google Fonts**/
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@500&family=Zen+Antique&display=swap');
+
+body{
+    font-family: 'Zen Antique', serif;
+}
+
+h1{
+    font-family: 'Exo', sans-serif;
+}
+
+/****************************NAV BAR****************/
+
+ul {
+  list-style-type: none;
+  margin-top: 80px;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+nav li a:link, nav li a:visited {
+	/*makes all list items a block*/
+  display: block;
+	/*text colour*/
+  color: #FFB243;
+	/*centers text*/
+  text-align: center;
+	/*adds spacing around the links(list items)*/
+  padding: 20px 30px;
+	/*removes the underline from the links*/
+  text-decoration: none;
+}
+
+/* Change the link properties on hover */
+nav li a:hover {
+  background-color: #6E3A00;
+}
+nav{
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+/******************************CENTER SECTIONS***********/
+
+	.flex-container{
+			display: flex;
+		}
+		.column{
+			flex:100%;
+			padding: 30px;
+		}
+		p{
+			line-height: 30px;
+			text-align: justify;
+		}
+		#left img{
+			float:right;
+			margin: 30px;
+		}
+
+
+/*********************************STRETCHED IMG********/
+.stretch{
+    display:flex;
+    align-items:stretch;
+    max-width: auto;
+    
+}
