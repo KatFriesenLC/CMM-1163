@@ -7,36 +7,49 @@
 
 body{
     font-family: 'Zen Antique', serif;
+	background-image: linear-gradient(to bottom, #2A7ABF, #F2F2F2, #FFFF, #F2F2F2, #2A7ABF);
 }
 
 h1{
     font-family: 'Exo', sans-serif;
+	align-content: center;
+	text-align: center;
+	font-size: 80px;
+	font-size-adjust:auto;
+	flex: 100%;
+}
+
+h2{
+	flex: 100%;
 }
 
 /****************************NAV BAR****************/
 
-ul {
+nav ul {
   list-style-type: none;
-  margin-top: 80px;
+  margin-top: 0px;
   padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
+  width: 10%;
+  background: transparent;
+	height:100%;
+	position: fixed;
+	overflow:auto;
 }
 
-li a {
+nav li a {
   display: block;
   color: #000;
   padding: 8px 16px;
   text-decoration: none;
 }
 
-li a.active {
-  background-color: #04AA6D;
-  color: white;
+nav li a.active {
+  background-color: #194973;
+  color: #F2B705;
 }
 
-li a:hover:not(.active) {
-  background-color: #555;
+nav li a:hover:not(.active) {
+  background-color: #21A668;
   color: white;
 }
 
@@ -44,7 +57,7 @@ nav li a:link, nav li a:visited {
 	/*makes all list items a block*/
   display: block;
 	/*text colour*/
-  color: #FFB243;
+  color: #921A1A;
 	/*centers text*/
   text-align: center;
 	/*adds spacing around the links(list items)*/
@@ -55,7 +68,7 @@ nav li a:link, nav li a:visited {
 
 /* Change the link properties on hover */
 nav li a:hover {
-  background-color: #6E3A00;
+  background-color: #2A7ABF;
 }
 nav{
 	position: -webkit-sticky;
@@ -65,27 +78,44 @@ nav{
 
 /******************************CENTER SECTIONS***********/
 
-	.flex-container{
-			display: flex;
-		}
-		.column{
-			flex:100%;
-			padding: 30px;
-		}
-		p{
-			line-height: 30px;
-			text-align: justify;
-		}
-		#left img{
-			float:right;
-			margin: 30px;
-		}
+.flex-container{
+	display:flex;
+	flex-wrap: wrap;
+	padding-left: 250px;
+}
 
+#header{
+	display: flex;
+	flex:100;
+	align-content: center;
+	text-align: center;
+}
+
+h2{
+	display:flex;
+	text-align: left;
+	align-items: flex-start;
+}
+
+img{
+	flex: 100%;
+}
 
 /*********************************STRETCHED IMG********/
-.stretch{
-    display:flex;
-    align-items:stretch;
-    max-width: auto;
-    
+#subHeadimg{
+	/*space inside the div*/
+	padding: 100px;
+	
+	/*set margin top and bottom to 0 and auto centered*/
+	margin: 0 auto;
+	/*set a background image*/
+	background-image: url("../images/wideMountain.jpg");
+	/*set the background image to cover the whole div*/
+	background-size: cover;
+	/*make it so the background image doesn't scroll with the page*/
+	background-attachment: fixed;
+	/*set css to look at entire element (padding included) to set size*/
+	box-sizing: border-box;
+	/*set a maximum width of 960px*/
+	max-width: auto;
 }
