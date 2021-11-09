@@ -11,16 +11,34 @@ body{
 
 h1{
     font-family: 'Exo', sans-serif;
+    font-size: 100px;
+}
+
+#header{
+    display: flex;
+    flex: 100%;
+/*
+    align-content: center;
+    justify-content: center;
+    padding-top: 80px;
+*/
 }
 
 /****************************NAV BAR****************/
 
 ul {
   list-style-type: none;
-  margin-top: 80px;
+    margin: 0px;
   padding: 0;
   width: 200px;
   background-color: #f1f1f1;
+    height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */   
+}
+
+li{
+   vertical-align: middle;
 }
 
 li a {
@@ -38,6 +56,7 @@ li a.active {
 li a:hover:not(.active) {
   background-color: #555;
   color: white;
+
 }
 
 nav li a:link, nav li a:visited {
@@ -57,29 +76,55 @@ nav li a:link, nav li a:visited {
 nav li a:hover {
   background-color: #6E3A00;
 }
+
 nav{
+/*
 	position: -webkit-sticky;
 	position: sticky;
+*/
+    position: absolute;
 	top: 0;
+}
+
+.vert-center{
+    display: flex;
+    justify-content: center;
+	
 }
 
 /******************************CENTER SECTIONS***********/
 
-	.flex-container{
-			display: flex;
+
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+    padding: 30px;
+    align-items: center;
 		}
-		.column{
-			flex:100%;
-			padding: 30px;
-		}
-		p{
-			line-height: 30px;
-			text-align: justify;
-		}
-		#left img{
-			float:right;
-			margin: 30px;
-		}
+
+/*
+#blue{
+    background-color:#235FA7;
+    object-fit: cover;
+}
+*/
+
+img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 100%;
+    text-align: center;
+}
+
+p{
+    line-height: 30px;
+    text-align: justify;
+    padding: 50px;
+    }
+		
 
 
 /*********************************STRETCHED IMG********/
@@ -87,5 +132,23 @@ nav{
     display:flex;
     align-items:stretch;
     max-width: auto;
-    
+    flex:100%;
+    object-fit: fill;
 }
+/*
+#white{
+    background-color: white;
+       object-fit: cover;
+}
+*/
+
+/************************************FOOTER***********/
+footer{
+    padding: 50px;
+}
+/*
+#blue2{
+    flex: 100%;
+    background-color:#235FA7;
+       object-fit: cover;
+}*/
