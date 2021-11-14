@@ -7,6 +7,20 @@
 
 body{
     font-family: 'Zen Antique', serif;
+	background-image: linear-gradient(to bottom, #5A5E6B, #2a7abf, #688dc9, #d0d0e4, #F2F2F2, #d0d0e4, #688dc9, #2a7abf, #5A5E6B);
+    line-height: 40px;
+}
+
+body::-webkit-scrollbar {
+	width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+	background: #5A5E6B;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #3A577E;
 }
 
 h1{
@@ -14,27 +28,40 @@ h1{
     font-size: 100px;
 }
 
+p{
+    text-align: center;
+    padding: 50px;
+    }
+
+h2{
+	text-align:center;
+}
+
+
 #header{
     display: flex;
     flex: 100%;
-/*
-    align-content: center;
-    justify-content: center;
-    padding-top: 80px;
-*/
+	background-image: url("../images/1esheader.svg");
+	background-repeat: no-repeat;
+	background-size:cover;
+	box-sizing: border-box;
+	padding: 10px;
+	margin-bottom: 100px;
 }
 
 /****************************NAV BAR****************/
 
 ul {
   list-style-type: none;
-    margin: 0px;
+  margin: 0px;
   padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
-    height: 100%; /* Full height */
+  width: 10rem;
+  background-color: #5A5E6B;
+  height: 100%; /* Full height */
   position: fixed; /* Make it stick, even on scroll */
   overflow: auto; /* Enable scrolling if the sidenav has too much content */   
+  display: inline-block;
+  vertical-align:middle;
 }
 
 li{
@@ -42,7 +69,7 @@ li{
 }
 
 li a {
-  display: block;
+/*  display: block;*/
   color: #000;
   padding: 8px 16px;
   text-decoration: none;
@@ -56,14 +83,13 @@ li a.active {
 li a:hover:not(.active) {
   background-color: #555;
   color: white;
-
 }
 
 nav li a:link, nav li a:visited {
 	/*makes all list items a block*/
   display: block;
 	/*text colour*/
-  color: #FFB243;
+  color: #E5EEFF;
 	/*centers text*/
   text-align: center;
 	/*adds spacing around the links(list items)*/
@@ -74,23 +100,14 @@ nav li a:link, nav li a:visited {
 
 /* Change the link properties on hover */
 nav li a:hover {
-  background-color: #6E3A00;
+  background-color: #3A577E;
 }
 
 nav{
-/*
-	position: -webkit-sticky;
-	position: sticky;
-*/
     position: absolute;
 	top: 0;
 }
 
-.vert-center{
-    display: flex;
-    justify-content: center;
-	
-}
 
 /******************************CENTER SECTIONS***********/
 
@@ -99,56 +116,33 @@ nav{
 .flex-container{
     display: flex;
     flex-direction: column;
-    margin-left: 250px;
+    margin: auto;
     padding: 30px;
     align-items: center;
+	justify-content: center;
+	text-align: center;
+	max-width: 800px;
 		}
-
 /*
-#blue{
-    background-color:#235FA7;
-    object-fit: cover;
+
+#item2{
+	margin-left: auto;
+	margin-right: auto;
+	width:200px;
 }
 */
 
-img{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 100%;
-    text-align: center;
-}
-
-p{
-    line-height: 30px;
-    text-align: justify;
-    padding: 50px;
-    }
-		
-
-
-/*********************************STRETCHED IMG********/
-.stretch{
-    display:flex;
-    align-items:stretch;
-    max-width: auto;
-    flex:100%;
-    object-fit: fill;
-}
-/*
-#white{
-    background-color: white;
-       object-fit: cover;
-}
-*/
 
 /************************************FOOTER***********/
+a:link, a:active, a:visited{
+	text-decoration: none;
+	color:#212531;
+}
+
+a:hover {
+	color:#255CBC;
+}
 footer{
     padding: 50px;
 }
-/*
-#blue2{
-    flex: 100%;
-    background-color:#235FA7;
-       object-fit: cover;
-}*/
+
