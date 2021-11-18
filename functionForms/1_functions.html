@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Functions, Buttons, and Forms</title>
+</head>
+
+<body>
+    
+    <h1 id="head">Tanya Weder is the Best Teacher</h1>
+    
+    <p id="luvT">I love scripting class. Tanya is the bestest most sweet tea-loving instructor and I think she would be a really cool boss. Maybe one day I will be able to meet the fantabulous Joe.</p>
+    
+    <div id="myDiv">
+        <p><i>My favourite animal is anything that is not human. Dog, cats, snakes, penguins... okay, maybe not orcas either. I love animals so much I have tried to go vegan but... chimken too tasty. Beyond my disdain for most of humanity, Tanya is pretty wonderful and I am very grateful to have her instructing my classes. 10/10 she is the most good.</i></p>
+    </div>
+    
+    <!-------EVENTS ARE REACTIONARY... FOR NOW WE USE BUTTON--->
+    <button onClick="changeContent();">Convince Kat to change their mind</button>
+    <button onClick="changeStyle();">Change Styles</button>
+    
+    
+    <script>
+        
+    //write a function definition that changes the content of the paragraph
+        function changeContent(){
+            //everything between the curly brackets runs when the function is called
+            console.log("your function worked! B)");
+            
+            //change the innerhtml of the paragraph
+            document.getElementById('luvT').innerHTML="Aha! You thought I would change my mind? A fool. A scoundrel, even. How dare ye question my loyalties.";
+            
+            //put different types of content in the div
+            document.getElementById('myDiv').innerHTML=
+                "<p>NOTHING WILL STEER MY HEART, <br><h3>HEED MY VOW.</h3><br> Tanya is the most marvelous instructor...<br>oh, wow. O_O</p><img src='https://live.staticflickr.com/3354/3308443915_b407d12f1c_b.jpg' alt='surprised cat'>"
+            
+            //take off his head!
+            document.getElementById('head').innerHTML="Tread light, you audacious sprite..."
+        } //ends changeContent
+        
+        function changeStyle(){
+            
+            console.log("style change");
+            
+            //create a variable that is a pointer to the div - assign the var to the div
+            var pointer= document.getElementById('myDiv');
+            
+            var pointer2= document.getElementById('luvT');
+            
+            var pointer3= document.getElementById('head');
+            
+            //use the var to change the style of the div
+            pointer.style.color="#B54162";
+            pointer.style.backgroundColor="#E0E4FD";
+        
+            
+            pointer2.style.color="#362218";
+            pointer2.style.backgroundColor="#E0E4FD";
+            pointer2.style.fontSize="40px";
+            
+            pointer3.style.color="#DB829B";
+            pointer3.style.backgroundColor="#584237";
+            pointer3.style.fontSize="60px";
+            
+        }
+        
+    </script>
+    
+    
+    
+</body>
+</html>
