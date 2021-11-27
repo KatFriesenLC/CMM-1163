@@ -3,22 +3,66 @@
 <head>
 <meta charset="utf-8">
 <title>madLibs</title>
-    
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;900&family=Noticia+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&family=Noticia+Text:ital,wght@0,400;0,700;1,400&display=swap');
+    
+				body{
+/*			display: block;*/
+					display:grid;
+			align-items: center;
+			justify-content:center;
+			margin: 0 20rem 0 20rem;
+			background-image:url("images/forestFloor.jpg")
+		}
         
-        h1{
+		h1, h2{
+			flex:100%;
           font-family: 'Londrina Solid', cursive;   
-        }
-        
-        h2{
-            font-family: 'Londrina Solid', cursive;   
-        }
+			background-color:aliceblue;
+			padding:20px;;
+			margin:0
+        }	
         
         p{
             font-family: 'Noticia Text', serif;
         }
+		
+		#inputs{
+			padding:30px;
+			margin: 0;
+			background-color:#D1D1D1;			
+		}
+		
+		label{
+/*			display:block;*/
+		}
         
+		input, textarea{
+/*			display:block;*/
+/*			width:15%;*/
+			
+		}
+		
+		#submitBtn{
+			border:0;
+			background: #B33C59;
+			padding:.5rem;
+			color: white;
+			margin:1rem 0;
+			width:15%;
+			text-transform:uppercase;
+			&:hover{
+				background: pink;
+			}
+		}
+		
+		img{
+			padding:6rem;
+			align-self: center;	
+		}
+		
+
         
         
 </style>
@@ -29,10 +73,12 @@
 </head>
 
 <body>
-	
+	<div>
     <h1>Aid a Mighty Mouse in their Adventures</h1>
     <h2><i>if you dare...</i></h2>
-    
+    </div>
+	
+	<div id="inputs">
 	<form action="javascript:write();">
 	<p>
 	
@@ -92,13 +138,15 @@
 	
     <p>
 		<label for="verb2">Verb:</label>
-			<input type="radio" name="verb2" value="race">Race
-			<input type="radio" name="verb2" value="skittle">Skittle
-			<input type="radio" name="verb2" value="wish">Wish<br>
+			<input type="radio" name="verb2" value="race"><em>race</em>
+			<input type="radio" name="verb2" value="skittle"><em>continue two-stepping</em>
+			<input type="radio" name="verb2" value="wish"><em>remember their late uncle</em><br>
+	</p>
+	<p>	
 		<label for="verb3">Verb...again:</label>
-			<input type="radio" name="verb3" value="race">Race
-			<input type="radio" name="verb3" value="skittle">Skittle
-			<input type="radio" name="verb3" value="wish">Wish
+			<input type="radio" name="verb3" value="race"><em>skip</em>
+			<input type="radio" name="verb3" value="skittle"><em>sacrifice a chicken</em>
+			<input type="radio" name="verb3" value="wish"><em>start a cult</em>
 	</p>
 	
     <p>
@@ -112,9 +160,9 @@
 		<input type="text" id="emotion" name="emotion" > <br>
 	
 	<label for="ptverb1">Past tense verb:</label>
-			<input type="radio" name="ptverb1" value="Wobble">Wobble
-			<input type="radio" name="ptverb1" value="Wibble">Wibble
-			<input type="radio" name="ptverb1" value="Swoosh">Swoosh
+			<input type="radio" name="ptverb1" value="Wobble"><em>sprinted</em>
+			<input type="radio" name="ptverb1" value="Wibble"><em>danced</em>
+			<input type="radio" name="ptverb1" value="Swoosh"><em>struggled through a drunk stupor</em>
     </p>
         
     <p>
@@ -122,11 +170,14 @@
 		<input type="text" id="ptverb2" name="ptverb2" > <br>
     <label for="ptverb3">again with the past tense verb:</label>
 			<select id="ptverb3" name="ptverb3">
-				<option value="huff">Huffed</option>
-				<option value="puff">Puffed</option>
-				<option value="panic">Panicked</option>
-				<option value="mad">Went mad</option>
+				<option value="huff">huffed</option>
+				<option value="puff">dreamed of David Bowie</option>
+				<option value="panic">panicked</option>
+				<option value="mad">went mad</option>
 			</select> <br>
+	</p>
+		
+	<p>
     <label for="ptverb4">Yet another past tense verb - something you do in response to an ick:</label>
 		<input type="text" id="ptverb4" name="ptverb4" > <br>
     <label for="adverb2">adverb:</label>
@@ -141,12 +192,17 @@
 		<input type="text" id="bodyp" name="bodyp" > <br>
     </p>
     
-    <input type="submit" value="submit">
+    <input type="submit" value="submit" id="submitBtn">
     
     </form>
-    
-	<div id="output">This is where the story will appear.</div>
-    
+		
+ 
+	
+	<div id="output"><a href="#top">forgot something o.o</a></div>
+		
+	<div id="image"><img src="images/mouseTm.png" alt="mouse"></div>
+      
+	</div>
     
     <script>
         
@@ -170,6 +226,7 @@
         var dis = document.getElementById('distance').value;
         var ver2 = document.querySelector('input[name="verb2"]:checked').value;
         var ver3 = document.querySelector('input[name="verb3"]:checked').value;
+		var ver3c;
         var apn = document.getElementById('appendage').value;
         var no6 = document.getElementById('noun6').value;
         
@@ -189,8 +246,17 @@
         
         
         //changing output
-        document.getElementById('output').innerHTML="<p id='p1'>    A small mouse made their way out of the "+ad1+" "+no1+" and into the "+ad2+" Forest. They were desperate to find "+no2+" because they were unbearably "+ad3+" and needed to get to the "+no3+" before they could rest. The most important part of their desperate task was to make sure they didn’t forget their "+adv1+" "+col+"  "+no4+". Leaving it behind would leave them vulnerable to attack and they would have to "+ver1+" even further to prove to their "+no5+" that they could be the "+dre+" of the Forest.</p><br>  <p id='p2'>The mouse felt encouraged by their friends; Spider, Frog and Slug to follow their dreams and become the best "+dre+" their forest had ever seen. It didn’t take long before they saw how "+ad4+" they could become. This empowered them to inspire other forest creatures to make their home a stateless, moneyless society. It wasn’t until the snake emerged from it’s home a few "+dis+" away that the mouse began to feel disturbed again. As the snake approached, the mouse began to "+ver2+" for home. They didn’t have time to make it up the tree so they "+ver3+" towards his nest instead. As the leaves crunched beneath his tiny "+apn+", they listened close for where the snake was. They could hear the sounds of the forest floor being crushed under the belly of the hognose snake getting more and more quiet. Taking a breath, they emerged from their "+no6+" to check on their friends.</p><br>   <p id='p3'>Spider had stuck himself between two "+plr+", “I am too small for him to eat.” he assured the mouse. Mouse tripped over Frog hiding in the mud, “I was too "+emo+" to make it to the water.” he croaked. The mouse "+pvr1+" and "+pvr2+" around the forest in search of his friend Slug. In circles and circles they "+pvr3+" until they felt a slimy thud. Mouse "+pvr4+" back in fear. Their heart thudded in their chest. “What’s wrong, mouse?” asked slug. “I thought you were dead!” The slug shrugged "+adv2+". I was just hanging out in the "+no7+". The mouse thought about it for a moment ... and noticed the silence. His ears "+pvr5+". “He’s coming... the "+no8+" is coming”, the mouse whispered. The thunderous clap of the "+no8+"’s "+bop+" sent the entire forest into chaos and the mouse and his friends were never heard from again.</p>";
+        document.getElementById('output').innerHTML="<p id='p1'>    A small mouse made their way out of the "+ad1+" "+no1+" and into the "+ad2+" forest. They were desperate to find "+no2+" because they were unbearably "+ad3+" and needed to get to the "+no3+" before they could rest. The most important part of their desperate task was to make sure they didn’t forget their "+adv1+" "+col+"  "+no4+". Leaving it behind would leave them vulnerable to attack and they would have to "+ver1+" for even longer to prove to their "+no5+" that they could be the "+dre+" of the forest.</p><br>  <p id='p2'>The mouse felt encouraged by their friends; Spider, Frog and Slug to follow their dreams and become the best "+dre+" their forest had ever seen. It didn’t take long before they saw how "+ad4+" they could become. This empowered them to inspire other forest creatures to make their home a stateless, moneyless society. It wasn’t until the snake emerged from it’s home a few "+dis+" away that the mouse began to feel disturbed again. As the snake approached, the mouse began to "+ver2+" for home. They didn’t have time to make it up the tree so they "+ver3+" towards his nest instead. As the leaves crunched beneath his tiny "+apn+", they listened close for where the snake was. They could hear the sounds of the forest floor being crushed under the belly of the hognose snake getting more and more quiet. Taking a breath, they emerged from their "+no6+" to check on their friends.</p><br>   <p id='p3'>Spider had stuck himself between two "+plr+", “I am too small for him to eat.” he assured the mouse. Mouse tripped over Frog hiding in the mud, “I was too "+emo+" to make it to the water.” he croaked. The mouse "+pvr1+" and "+pvr2+" around the forest in search of his friend Slug. In circles and circles they "+pvr3+" until they felt a slimy thud. Mouse "+pvr4+" back in fear. Their heart thudded in their chest. “What’s wrong, mouse?” asked slug. “I thought you were dead!” The slug shrugged "+adv2+". I was just hanging out in the "+no7+". The mouse thought about it for a moment ... and noticed the silence. His ears "+pvr5+". “He’s coming... the "+no8+" is coming”, the mouse whispered. The thunderous clap of the "+no8+"’s "+bop+" sent the entire forest into chaos and the mouse and his friends were never heard from again.</p><br>"+ver3c;
         
+		if (ver3=="skip") {
+				ver3c = document.getElementById('image').innerHTML="<img id='image' src='images/mushroomsTm.png' alt='mushroom'>";
+		} else if (ver3=="sacrifice a chicken"){			
+				ver3c = document.getElementById('image').innerHTML="<img id='image' src='images/bonesTm.png' alt='bones'>";
+			} else if (ver3=="start a cult"){		
+				ver3c = document.getElementById('image').innerHTML="<img id='image' src='images/skullTm.png' alt='skull on a post'>";
+			}
+		
+		
         console.log('fuck please');
     }
         
