@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dynamic setInterval</title>
+    
+    <style>
+        
+        #box1{
+            width:200px;
+            height:200px;
+            background-color: #BD91D9;
+            position: relative;
+            margin:20px;
+        }
+        
+        #moveBtn{
+            margin:20px;
+        }
+        
+    </style>
+    
+</head>
+
+<body>
+    
+    <div id="box1"></div>
+    
+    <button id="moveBtn">Shove it.</button>
+    
+    <br>
+    
+    <button id="stopBtn">Stop It!</button>
+    
+    <script>
+        
+        //pointer to the div we want to move
+        var box1 = document.getElementById('box1');
+        
+        //var to hold the position
+        var position=0;
+        
+        //create moveInt var so its available to all functions
+        var moveInt;
+        
+        //event listener - moveBtn - move
+        document.getElementById('moveBtn').addEventListener('click', move);
+        //stop event listener
+        document.getElementById('stopBtn').addEventListener('click', stop);
+        
+        function move(){
+            console.log('move');
+            
+            //setInterval that will move the box every .5 seconds
+            moveInt = setInterval(animate, 50);
+        }
+        
+        function animate(){
+            console.log('animate');
+            
+            //add to the position var
+            position+=5;
+            
+            //move the div to that place
+            box1.style.left=position+"px";
+            box1.style.backgroundColor="blue";
+            
+        }
+        
+        function stop(){
+            console.log('stop');
+            
+            //clear the interval
+            clearInterval(moveInt);
+            box1.style.backgroundColor="#BD91D9";
+        }
+        
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Coolest Calendar</title>
+	
+	
+	<style>
+	
+		@import url("https://use.typekit.net/jve5ldf.css");
+		@import url("https://use.typekit.net/jve5ldf.css");
+/*
+		font-family: quara-web, sans-serif;
+
+		font-family: poster-gothic-atf, sans-serif;
+*/
+		
+		body{
+			background-color:#BBBABF;
+		}
+		
+		#parent{
+			height: 600px;
+			width: 800px;
+			top:100px;
+			margin: auto;
+			position: relative;
+			background-color:#655F7A;
+			opacity:0.4;
+			padding: 40px;
+		}
+		
+		#dayOfWeek{
+			align-items: center;
+			font-family: quara-web, sans-serif;
+			
+		}
+		
+		#month{
+			font-family: poster-gothic-atf, sans-serif;
+		}
+		
+		#dayOfMonth{
+			font-family: quara-web, sans-serif;
+		}
+		
+		#year{
+			font-family: quara-web, sans-serif;
+		}
+		
+		#hour{
+			font-family: poster-gothic-atf, sans-serif;
+		}
+		
+		#minute{
+			font-family: poster-gothic-atf, sans-serif;
+		}
+		
+		#seconds{
+			font-family: poster-gothic-atf, sans-serif;
+		}
+	
+	
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id="parent">
+		<div id="dayOfWeek">day of week</div>
+		<div id="month">month</div>
+		<div id="dayOfMonth">1-31</div>
+		<div id="year">2021</div>
+		<div id="hour">1-12</div>
+		<div id="minute">1-59</div>
+		<div id="seconds">1-59</div>
+	</div>
+	
+	
+	
+	
+	<script>
+	
+		function calendar(){
+			
+		var d=new Date();
+			
+	var dow = d.getDay();
+			var dow=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+	var mo = d.getMonth();
+			var mo=["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+	var dom = d.getDate();
+	var yr = d.getFullYear();
+	var hr = d.getHours();
+	var min = d.getMinutes();
+	var sec = d.getSeconds();
+	
+		
+			document.getElementById('dayOfWeek').innerHTML=dow[d.getDay()];			document.getElementById('month').innerHTML=mo[d.getMonth()];
+			document.getElementById('dayOfMonth').innerHTML=dom;
+			document.getElementById('year').innerHTML=yr;
+			document.getElementById('hour').innerHTML=hr;
+			document.getElementById('minute').innerHTML=min+min;		document.getElementById('seconds').innerHTML=sec;
+            console.log('a date? uwu');	
+			
+			if (min<10){
+				min="0"+mins
+			}
+			
+			if (mo=="January"){
+				document.getElementById('parent').innerHTML="<img src='images/jan.png' alt='winter castle'>"
+			} else if (mo=="December"){
+				document.getElementById('parent').innerHTML="<img src='images/jdec.png' alt='winter forest'>"
+			}
+		}
+		
+		calendar();
+	 var myInt=setInterval(calendar, 1000);	
+	
+	
+	</script>
+</body>
+</html>

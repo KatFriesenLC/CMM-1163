@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Strings</title>
+</head>
+
+<body>
+    
+     <h1>String Object</h1>
+    
+    <p>Click the button to learn more about strings.</p>
+    
+    <!---This is the div for JS feedback-->
+    <div id="output"></div>
+    
+    <button id="btn1">Click Me</button>
+    
+    
+    
+    <script>
+    //this code listens for the button click and then calls a function
+    //parameter: which event are you listening for and which function is being called
+        document.getElementById('btn1').addEventListener('click', stringStuff);
+        
+        function stringStuff(){
+            console.log('Yes sir');
+            
+            //pointer to the div
+            var output=document.getElementById('output');
+            
+            //create a variable that holds a string
+            var myWord="Majestical"
+            
+            var mySentence="Another fun thing to say is some people need a high five. To the face. With a chair.";
+            
+            //check to see if the sentence has a particular letter
+            output.innerHTML="Does my word start with a M?"+myWord.startsWith('M');
+            
+            output.innerHTML+="<br>Does my sentence start with 'Another'?"+mySentence.startsWith('Another');
+            
+            output.innerHTML+="<br>Change myWord to uppercase: "+myWord.toUpperCase();
+            
+        }
+        
+    </script>
+</body>
+</html>
