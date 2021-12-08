@@ -17,7 +17,9 @@
 		
 		body{
 			background-color:#BBBABF;
+			text-color: black;
 		}
+		
 		
 		#parent{
 			height: 600px;
@@ -25,39 +27,59 @@
 			top:100px;
 			margin: auto;
 			position: relative;
-			background-color:#655F7A;
-			opacity:0.4;
-			padding: 40px;
+/*			background-color:#655F7A;*/
+			opacity:0.8;
+			padding: 100px 10px 10px 50px;
+		}
+		
+		#date{
+			font-size: 3rem;
+			display: inline-grid;
+			position: absolute;
+			left: 100px;
+			top: 170px;
 		}
 		
 		#dayOfWeek{
-			align-items: center;
 			font-family: quara-web, sans-serif;
-			
 		}
 		
 		#month{
-			font-family: poster-gothic-atf, sans-serif;
+			font-family: quara-web, sans-serif;
+			font-size: 5rem;
 		}
 		
 		#dayOfMonth{
 			font-family: quara-web, sans-serif;
+			font-size: 5rem;
 		}
 		
 		#year{
 			font-family: quara-web, sans-serif;
+			font-size: 3.5rem;
+		}
+		
+		#time{
+			font-size: 3rem;
+			display: inline-grid;
+			position: absolute;
+			right: 200px;
+			top: 250px;
 		}
 		
 		#hour{
 			font-family: poster-gothic-atf, sans-serif;
+
 		}
 		
 		#minute{
 			font-family: poster-gothic-atf, sans-serif;
+
 		}
 		
 		#seconds{
 			font-family: poster-gothic-atf, sans-serif;
+
 		}
 	
 	
@@ -66,15 +88,20 @@
 </head>
 
 <body>
-	
+
 	<div id="parent">
+		<img id="bkImg" src="images/jan.png" alt="church on a frozen lake">
+			<div id="date">
 		<div id="dayOfWeek">day of week</div>
 		<div id="month">month</div>
 		<div id="dayOfMonth">1-31</div>
 		<div id="year">2021</div>
+			</div>
+			<div id="time">
 		<div id="hour">1-12</div>
 		<div id="minute">1-59</div>
 		<div id="seconds">1-59</div>
+			</div>
 	</div>
 	
 	
@@ -97,21 +124,27 @@
 	var sec = d.getSeconds();
 	
 		
-			document.getElementById('dayOfWeek').innerHTML=dow[d.getDay()];			document.getElementById('month').innerHTML=mo[d.getMonth()];
+			document.getElementById('dayOfWeek').innerHTML=dow[d.getDay()]+" ";			
+			document.getElementById('month').innerHTML=mo[d.getMonth()];
 			document.getElementById('dayOfMonth').innerHTML=dom;
 			document.getElementById('year').innerHTML=yr;
 			document.getElementById('hour').innerHTML=hr;
-			document.getElementById('minute').innerHTML=min+min;		document.getElementById('seconds').innerHTML=sec;
+			document.getElementById('minute').innerHTML=min+min;		
+			document.getElementById('seconds').innerHTML=sec;
             console.log('a date? uwu');	
 			
 			if (min<10){
-				min="0"+mins
+				min="0"+mins;
+			}
+			if (hr>12){
+				hr-12;
+			}
+			if (hr==0){
+				hr==12;
 			}
 			
 			if (mo=="January"){
-				document.getElementById('parent').innerHTML="<img src='images/jan.png' alt='winter castle'>"
-			} else if (mo=="December"){
-				document.getElementById('parent').innerHTML="<img src='images/jdec.png' alt='winter forest'>"
+				document.body.style.backgroundImage="url('images/jan.png')";
 			}
 		}
 		
