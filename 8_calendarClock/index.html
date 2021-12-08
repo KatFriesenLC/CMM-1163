@@ -129,23 +129,25 @@
 			document.getElementById('dayOfMonth').innerHTML=dom;
 			document.getElementById('year').innerHTML=yr;
 			document.getElementById('hour').innerHTML=hr;
-			document.getElementById('minute').innerHTML=min+min;		
+			document.getElementById('minute').innerHTML=min;		
 			document.getElementById('seconds').innerHTML=sec;
-            console.log('a date? uwu');	
+            
 			
 			if (min<10){
-				min="0"+mins;
+			document.getElementById('minute').innerHTML="0"+min;	
 			}
 			if (hr>12){
-				hr-12;
+			document.getElementById('hour').innerHTML=hr-"12";
 			}
 			if (hr==0){
-				hr==12;
+			document.getElementById('hour').innerHTML=hr+"12";
 			}
-			
+
 			if (mo=="January"){
-				document.body.style.backgroundImage="url('images/jan.png')";
-			}
+				mo=document.getElementById('bkImg').innerHTML="<img id='bkImg' src='images/jan.png' alt='a cold mountain village'>";
+			} else if (mo=="December"){
+				mo=document.getElementById('bkImg').innerHTML="<img id='bkImg' src='images/dec.png' alt='a frosty forest'>";			
+			} 			console.log('a date? uwu');	
 		}
 		
 		calendar();
