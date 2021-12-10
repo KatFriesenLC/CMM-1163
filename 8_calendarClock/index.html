@@ -16,8 +16,11 @@
 */
 		
 		body{
-			background-color:#BBBABF;
+			background-color:#1D1A2B;
 			text-color: black;
+			text-shadow: 3px 3px #F0E6FA;
+			-webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: white;
 		}
 		
 		
@@ -25,11 +28,14 @@
 			height: 600px;
 			width: 800px;
 			top:100px;
+			background-color: lavender;
 			margin: auto;
 			position: relative;
-/*			background-color:#655F7A;*/
 			opacity:0.8;
 			padding: 100px 10px 10px 50px;
+			background-image: url("images/cock.png");
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 		
 		#date{
@@ -90,7 +96,6 @@
 <body>
 
 	<div id="parent">
-		<img id="bkImg" src="images/jan.png" alt="church on a frozen lake">
 			<div id="date">
 		<div id="dayOfWeek">day of week</div>
 		<div id="month">month</div>
@@ -114,9 +119,9 @@
 		var d=new Date();
 			
 	var dow = d.getDay();
-			var dow=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+			var dow=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 	var mo = d.getMonth();
-			var mo=["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+			var mon=["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	var dom = d.getDate();
 	var yr = d.getFullYear();
 	var hr = d.getHours();
@@ -125,13 +130,13 @@
 	
 		
 			document.getElementById('dayOfWeek').innerHTML=dow[d.getDay()]+" ";			
-			document.getElementById('month').innerHTML=mo[d.getMonth()];
+			document.getElementById('month').innerHTML=mon[mo];
 			document.getElementById('dayOfMonth').innerHTML=dom;
 			document.getElementById('year').innerHTML=yr;
 			document.getElementById('hour').innerHTML=hr;
 			document.getElementById('minute').innerHTML=min;		
 			document.getElementById('seconds').innerHTML=sec;
-            
+            console.log('a date? uwu');	
 			
 			if (min<10){
 			document.getElementById('minute').innerHTML="0"+min;	
@@ -143,11 +148,34 @@
 			document.getElementById('hour').innerHTML=hr+"12";
 			}
 
-			if (mo=="January"){
-				mo=document.getElementById('bkImg').innerHTML="<img id='bkImg' src='images/jan.png' alt='a cold mountain village'>";
-			} else if (mo=="December"){
-				mo=document.getElementById('bkImg').innerHTML="<img id='bkImg' src='images/dec.png' alt='a frosty forest'>";			
-			} 			console.log('a date? uwu');	
+		//photos
+		
+			if (mo==0) {
+				document.getElementById('parent').style.backgroundImage="url('images/jan.png')";
+			} if (mo==1){
+				document.getElementById('parent').style.backgroundImage="url('images/feb.png')";		
+			} if (mo==2){
+				document.getElementById('parent').style.backgroundImage="url('images/march.png')";		
+			} if (mo==3){
+				document.getElementById('parent').style.backgroundImage="url('images/april.png')";		
+			} if (mo==4){
+				document.getElementById('parent').style.backgroundImage="url('images/may.png')";		
+			} if (mo==5){
+				document.getElementById('parent').style.backgroundImage="url('images/june.png')";		
+			} if (mo==6){
+				document.getElementById('parent').style.backgroundImage="url('images/july.png')";		
+			} if (mo==7){
+				document.getElementById('parent').style.backgroundImage="url('images/august.png')";		
+			} if (mo==8){
+				document.getElementById('parent').style.backgroundImage="url('images/september.png')";		
+			} if (mo==9){
+				document.getElementById('parent').style.backgroundImage="url('images/october.png')";		
+			} if (mo==10){
+				document.getElementById('parent').style.backgroundImage="url('images/november.png')";		
+			} if (mo==11){
+				document.getElementById('parent').style.backgroundImage="url('images/dec.png')";		
+			}			
+		console.log (mo);
 		}
 		
 		calendar();
